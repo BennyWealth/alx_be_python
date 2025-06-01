@@ -3,18 +3,26 @@ while True:
         first_number = int(input("Enter the first number: "))
         second_number = int(input("Enter the second number: "))
         operator = input("Choose the operation (+, -, *, /): ")
+
         match operator:
             case "+":
-                    print(f"The result is { first_number + second_number}")
+                result = first_number + second_number
+                print(f"The result is {result}")
             case "-":
-                    print(f"The result is { first_number - second_number}")
+                result = first_number - second_number
+                print(f"The result is {result}")
             case "*":
-                    print(f"The result is { first_number * second_number}")
+                result = first_number * second_number
+                print(f"The result is {result}")
             case "/":
-                    print(f"The result is { first_number / second_number}")
+                if second_number == 0:
+                    print("Error: Division by zero is not allowed.")
+                else:
+                    result = first_number / second_number
+                    print(f"The result is {result}")
             case _:
-                print("Enter the correct operator ")
+                print("Enter a valid operator (+, -, *, /)")
     except ValueError:
-          print("Enter an integer: ")
+        print("Enter a valid integer.")
 
 

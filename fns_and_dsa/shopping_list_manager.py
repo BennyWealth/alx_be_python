@@ -4,7 +4,7 @@ shopping_list = []
 def add_item():
     add = "yes"
     while add.lower() == "yes":
-        item = input("Enter item to add to shopping list: ")
+        item = input("['\"]Enter the item to add: ['\"]\ ")
         shopping_list.append(item)
         print(f"{item} has been added to the shopping list.")
         add = input("Do you want to add more items? (yes/no): ").lower()

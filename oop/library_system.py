@@ -7,6 +7,9 @@ class Book:
     def get_details(self):
         return f"Book: {self.title} by {self.author}"
 
+    def __str__(self):
+        return self.get_details()
+
 
 class EBook(Book):
     def __init__(self, title: str, author: str, file_size: int):
@@ -16,6 +19,9 @@ class EBook(Book):
     def get_details(self):
         return f"EBook: {self.title} by {self.author}, File Size: {self.file_size}KB"
 
+    def __str__(self):
+        return self.get_details()
+
 
 class PrintBook(Book):
     def __init__(self, title: str, author: str, page_count: int):
@@ -24,6 +30,9 @@ class PrintBook(Book):
 
     def get_details(self):
         return f"PrintBook: {self.title} by {self.author}, Page Count: {self.page_count}"
+
+    def __str__(self):
+        return self.get_details()
 
 
 class Library:
@@ -35,4 +44,4 @@ class Library:
 
     def list_books(self):
         for book in self.books:
-            print(book.get_details())
+            print(book)
